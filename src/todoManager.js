@@ -9,15 +9,23 @@ const toDoManager = (() => {
     renderToDoList(toDos);
     renderCards(toDos);
   };
+
   const removeToDo = (todo) => console.log('TODO');
+
   function getTodos() {
     return this.toDos;
+  }
+
+  function updateToDo(toDo) {
+    const toDoToUpdate = toDos.find(item => item.title === toDo.title);
+    console.log(toDoToUpdate);
   }
 
   return {
     addToDo,
     removeToDo,
     getTodos,
+    updateToDo,
   };
 })();
 

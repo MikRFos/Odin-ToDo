@@ -1,16 +1,20 @@
 import toDoManager from "./todoManager";
 
 function renderMainPage() {
-  const container = document.querySelector('.container');
+  const container = document.querySelector('.content');
 
   const title = document.createElement('h1');
   title.textContent = 'ToDo Lists';
   title.classList.add('title');
   container.appendChild(title);
 
+  const mainContent = document.createElement('div');
+  mainContent.classList.add('main-body');
+  container.appendChild(mainContent);
+
   const sidebar = document.createElement('div');
   sidebar.classList.add('sidebar');
-  container.appendChild(sidebar);
+  mainContent.appendChild(sidebar);
 
   const sidebarTitle = document.createElement('h3');
   sidebarTitle.textContent = 'Projects';
@@ -21,8 +25,8 @@ function renderMainPage() {
   sidebar.appendChild(projectList);
 
   const mainSection = document.createElement('div');
-  mainSection.classList.add('content');
-  container.appendChild(mainSection);
+  mainSection.classList.add('card-container');
+  mainContent.appendChild(mainSection);
 }
 
 export {renderMainPage};

@@ -1,8 +1,11 @@
-body {
+.main-body {
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
 
+.title {
+  text-align: center;
+}
 .sidebar {
   padding-right: 100px;
 }
@@ -10,6 +13,7 @@ body {
 .card-container { 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  gap: 15px;
 }
 
 .card {
