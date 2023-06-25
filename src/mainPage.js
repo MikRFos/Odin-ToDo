@@ -1,7 +1,9 @@
 import toDoManager from "./todoManager";
+import createModal from './modalForm';
 
 function renderMainPage() {
   const container = document.querySelector('.content');
+  createModal();
 
   const title = document.createElement('h1');
   title.textContent = 'ToDo Lists';
@@ -27,6 +29,14 @@ function renderMainPage() {
   const mainSection = document.createElement('div');
   mainSection.classList.add('card-container');
   mainContent.appendChild(mainSection);
+
+  const button = document.createElement('button');
+  button.textContent = 'Create ToDo';
+  button.addEventListener('click', () => {
+    const dialog = document.querySelector('dialog');
+    dialog.showModal();
+  });
+  mainContent.appendChild(button);
 }
 
 export {renderMainPage};

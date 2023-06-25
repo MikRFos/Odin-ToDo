@@ -20,6 +20,8 @@ function renderToDoList(lists) {
 
 function renderCards(cards) {
   const container = document.querySelector('.card-container');
+  container.textContent = '';
+  
   for (const card of cards) {
     const newCard = document.createElement('div');
     newCard.classList.add('card');
