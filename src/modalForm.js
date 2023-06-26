@@ -59,9 +59,10 @@ function createModal() {
   button.addEventListener('click', () => {
     const itemList = toDoInputs.value.split(',');
     toDoManager.addToDo(titleInput.value, itemList, descriptionInput.value);
-    titleInput.textContent = '';
-    toDoInputs.textContent = '';
-    descriptionInput.textContent = '';
+    titleInput.value = '';
+    toDoInputs.value = '';
+    descriptionInput.value = '';
+    modal.close();
   });
   modal.appendChild(button);
 
